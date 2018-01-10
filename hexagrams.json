@@ -1,0 +1,160 @@
+{
+  "lines": [
+    "-/-",
+    "---"
+  ],
+  "trigrams": [
+    {
+      "id": 1,
+      "name": "qián",
+      "nameEng": "The Creative, Force",
+      "imageInNature": "Heaven, Sky",
+      "direction": "northwest",
+      "familyRelationship": "father",
+      "bodyPart": "head",
+      "attribute": "strong",
+      "stage": "creative",
+      "animal": "horse",
+      "binary": "111"
+    },
+    {
+      "id": 2,
+      "name": "duì",
+      "nameEng": "The Joyous, Open",
+      "imageInNature": "Lake, Marsh",
+      "direction": "west",
+      "familyRelationship": "third daughter",
+      "bodyPart": "mouth",
+      "attribute": "pleasure",
+      "stage": "tranquil (complete devotion)",
+      "animal": "sheep, goat",
+      "binary": "110"
+    },
+    {
+      "id": 3,
+      "name": "lí",
+      "nameEng": "the Clinging, Radiance",
+      "imageInNature": "Fire",
+      "direction": "south",
+      "familyRelationship": "second daughter",
+      "bodyPart": "eye",
+      "attribute": "light-giving, dependence",
+      "stage": "clinging, clarity, adaptable",
+      "animal": "pheasant",
+      "binary": "101"
+    },
+    {
+      "id": 4,
+      "name": "zhèn",
+      "nameEng": "the Arousing, Shake",
+      "imageInNature": "thunder",
+      "direction": "east",
+      "familyRelationship": "first son",
+      "bodyPart": "foot",
+      "attribute": "inciting movement",
+      "stage": "initiative",
+      "animal": "dragon",
+      "binary": "100"
+    },
+    {
+      "id": 5,
+      "name": "xùn",
+      "nameEng": "the Gentle, Ground",
+      "imageInNature": "wind",
+      "direction": "southeast",
+      "familyRelationship": "first daughter",
+      "bodyPart": "thigh",
+      "attribute": "penetrating",
+      "stage": "gentle entrance",
+      "animal": "fowl",
+      "binary": "011"
+    },
+    {
+      "id": 6,
+      "name": "kǎn",
+      "nameEng": "the Abysmal, Gorge",
+      "imageInNature": "water",
+      "direction": "north",
+      "familyRelationship": "second son",
+      "bodyPart": "ear",
+      "attribute": "dangerous",
+      "stage": "in-motion",
+      "animal": "pig",
+      "binary": "010"
+    },
+    {
+      "id": 7,
+      "name": "gèn",
+      "nameEng": "Keeping Still, Bound",
+      "imageInNature": "mountain",
+      "direction": "northeast",
+      "familyRelationship": "third son",
+      "bodyPart": "hand",
+      "attribute": "resting, stand-still",
+      "stage": "completion",
+      "animal": "wolf, dog",
+      "binary": "001"
+    },
+    {
+      "id": 8,
+      "name": "kūn",
+      "nameEng": "the Receptive, Field",
+      "imageInNature": "earth",
+      "direction": "southwest",
+      "familyRelationship": "mother (consort)",
+      "bodyPart": "belly",
+      "attribute": "devoted, yielding",
+      "stage": "receptive",
+      "animal": "cow",
+      "binary": "000"
+    }
+  ],
+  "hexagrams": [
+    {
+      "id": 1,
+      "name": "Ch'ien",
+      "nameEng": "The Creative",
+      "lowerTrigram": 1,
+      "upperTrigram": 1,
+      "decimal": "&#19904;",
+      "hex": "&#x4DC0;",
+      "summary": "",
+      "judgement": "",
+      "judgementSummary": "",
+      "image": "",
+      "imageSummary": "",
+      "changingLines": [
+        {
+          "id": 1,
+          "judgement": "",
+          "judgementSummary": ""
+        },
+        {
+          "id": 2,
+          "judgement": "",
+          "judgementSummary": ""
+        },
+        {
+          "id": 3,
+          "judgement": "",
+          "judgementSummary": ""
+        },
+        {
+          "id": 4,
+          "judgement": "",
+          "judgementSummary": ""
+        },
+        {
+          "id": 5,
+          "judgement": "",
+          "judgementSummary": ""
+        },
+        {
+          "id": 6,
+          "judgement": "",
+          "judgementSummary": ""
+        }
+      ]
+    }
+  ]
+}

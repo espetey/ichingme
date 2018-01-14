@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import LineComponent from './Components/LineComponent';
+import CastingComponent from './Components/CastingComponent';
 import './App.css';
+import hexagrams from './data/h1.json';
+import hexagrams3 from './data/hexagrams3.json';
 
 class App extends Component {
   constructor(props) {
@@ -12,8 +15,10 @@ class App extends Component {
       line3: null,
       line4: null,
       line5: null,
-      line6: null
+      line6: null,
+      reading: null
     }
+    // this.thing();
   }
 
   render() {
@@ -22,32 +27,71 @@ class App extends Component {
         <header className="App-header">
           iChingMe
         </header>
-        <button className="cast-btn" onClick={() => this.generateCasting()}>Cast</button>
-        <div className="Casting">
-          <LineComponent className="Line-6" lineNumber="6" value={this.state.line6} />
-          <LineComponent className="Line-5" lineNumber="5" value={this.state.line5} />
-          <LineComponent className="Line-4" lineNumber="4" value={this.state.line4} />
-          <LineComponent className="Line-3" lineNumber="3" value={this.state.line3} />
-          <LineComponent className="Line-2" lineNumber="2" value={this.state.line2} />
-          <LineComponent className="Line-1" lineNumber="1" value={this.state.line1} />
+        <button className="cast-btn"
+          onClick={() => this.setState({
+            casting: this.generateCasting()
+          })}>
+          Cast
+        </button>
+        <hr />
+        <CastingComponent
+          className="Casting"
+          casting={this.state.casting}
+        />
+        <hr />
+        <div>
+          {JSON.stringify(this.state.batch)}
         </div>
       </div>
     );
   }
 
-  /*
-6, 8 are broken
-7, 9 solid
-  */
-  generateCasting() {
-    this.setState({
-      line1: this.castLine(),
-      line2: this.castLine(),
-      line3: this.castLine(),
-      line4: this.castLine(),
-      line5: this.castLine(),
-      line6: this.castLine()
+  thing() {
+    const stuff = hexagrams.map((hexagram, i) => {
+      return {
+        ...hexagram,
+        // judgement: {
+        //   oracle: hexagrams3[i].interpretation.oracle,
+        //   interpretation: hexagrams3[i].interpretation.judgment
+        // }
+        // image: {
+        //   ...hexagram.image,
+        //   oracle: hexagrams3[i].interpretation.image.oracle
+        // }
+        // lines: hexagram.lines.map((line, z) => {
+        //   return {
+        //     ...line,
+        //     oracle: hexagrams3[i].interpretation.lines[z] ? hexagrams3[i].interpretation.lines[z].poem : ''
+        //   }
+        // })
+      }
     });
+    this.state.batch = stuff;
+  }
+
+  generateCasting() {
+    const lines = [
+      this.castLine(),
+      this.castLine(),
+      this.castLine(),
+      this.castLine(),
+      this.castLine(),
+      this.castLine()
+    ];
+
+    const changedLines = lines.map(line => {
+      if (line === 7) {
+        return 9;
+      } else if (line === 8) {
+        return 6;
+      }
+      return line;
+    }).join('');
+
+    return {
+      ...hexagrams.find(h => h.changingLines === changedLines),
+      lineNumbers: lines
+    };
   }
 
   castLine() {

@@ -16,6 +16,7 @@ class CastingComponent extends Component {
         <div>no casting</div>
       )
     }
+    const href = `http://reoxy.org/iching/${casting.number}.html`;
     return (
       <div className="Casting">
         <LineComponent className="Line-6" lineNumber="6" value={casting.lineNumbers[5]} />
@@ -27,6 +28,8 @@ class CastingComponent extends Component {
         <br />
         <br />
         {casting.title}
+        <br />
+        <a href={href} target="_blank">deoxy/reoxy</a>
         <br />
         <br />
         {casting.introduction}
